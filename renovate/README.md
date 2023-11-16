@@ -1,5 +1,8 @@
 # Renovate
 
+>[!important]
+>This renovate setup was adpated from [@paddyroddy](https://github.com/paddyroddy) and his [renovate talk](https://paddyroddy.github.io/talks/2023-11-14-arc-renovate/)
+
 To enable `Renovate` in a given repository, one must install and enable the
 [GitHub application](https://github.com/apps/renovate).
 One must then make a `.renovaterc.json5` file in the repository, of the following
