@@ -1,0 +1,40 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "config:best-practices",
+    "schedule:weekdays",
+    ":assignAndReview(milanmlft)",
+    ":automergeBranch",
+    ":automergeDigest",
+    ":automergeMinor",
+    ":automergePatch",
+    ":disableDependencyDashboard",
+    ":enablePreCommit",
+    ":label(renovate)",
+    ":maintainLockFilesMonthly",
+    ":noUnscheduledUpdates",
+  ],
+  commitMessageAction: "Renovate:",
+  "git-submodules": {
+    enabled: true,
+  },
+  packageRules: [
+    {
+      description: "Only allow major updates",
+      enabled: false,
+      matchDepNames: ["renovatebot/pre-commit-hooks"],
+      matchUpdateTypes: ["minor", "patch", "pin"],
+    },
+    {
+      description: "Combine updates together",
+      groupName: "paddyroddy/.github",
+      matchDepNames: ["paddyroddy/.github"],
+    },
+    {
+      description: "Shorten commit titles",
+      commitMessageTopic: "{{depName}}",
+      matchManagers: ["github-actions", "pre-commit"],
+    },
+  ],
+}
+
