@@ -2,7 +2,8 @@
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: [
     "config:best-practices",
-    "schedule:weekdays",
+    "schedule:automergeWeekdays",
+    "schedule:monthly",
     ":assignAndReview(milanmlft)",
     ":automergeBranch",
     ":automergeDigest",
@@ -27,8 +28,8 @@
     },
     {
       description: "Combine updates together",
-      groupName: "paddyroddy/.github",
-      matchDepNames: ["paddyroddy/.github"],
+      groupName: "milanmlft/.github",
+      matchDepNames: ["milanmlft/.github"],
     },
     {
       description: "Shorten commit titles",
