@@ -15,7 +15,6 @@
     ":maintainLockFilesMonthly",
     ":noUnscheduledUpdates",
   ],
-  commitMessageAction: "Renovate:",
   "git-submodules": {
     enabled: true,
   },
@@ -25,11 +24,6 @@
       enabled: false,
       matchDepNames: ["renovatebot/pre-commit-hooks"],
       matchUpdateTypes: ["minor", "patch", "pin"],
-    },
-    {
-      description: "Combine updates together",
-      groupName: "milanmlft/.github",
-      matchDepNames: ["milanmlft/.github"],
     },
     {
       description: "Shorten commit titles",
